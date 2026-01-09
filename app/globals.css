@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* VS Code 경고가 거슬린다면 @theme 대신 예전처럼 정의해도 되지만, 
+   v4 정석은 아래와 같습니다. */
+@theme {
+  --font-sans: "Pretendard", system-ui, sans-serif;
+  --color-brand-orange: #FF8A00;
+  --color-brand-red: #FF0000;
+}
+
+@layer base {
+  *, ::after, ::before {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+  }
+}
