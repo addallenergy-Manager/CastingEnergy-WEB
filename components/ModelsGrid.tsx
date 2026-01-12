@@ -34,7 +34,7 @@ useEffect(() => {
             // 이미지 주소가 상대 경로일 경우 배포된 API 주소를 붙여줌
             image: (item.image || item.secure_url || item.url)?.startsWith('http') 
                     ? (item.image || item.secure_url || item.url)
-                    : `https://castingenergy-api.vercel.app${item.image || item.secure_url || item.url}`,
+                    : `https://castingenergy-api.vercel.app/api/works${item.image || item.secure_url || item.url}`,
             description: item.description || ""
           }));
           setWorks(formattedData);
