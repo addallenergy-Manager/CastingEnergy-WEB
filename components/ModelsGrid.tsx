@@ -17,9 +17,9 @@ export function ModelsGrid() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // 💡 요청하신 대로 어제와 똑같이 3002번 포트로 고정합니다.
-    const API_URL = "http://localhost:3002/api/works";
+useEffect(() => {
+    // 💡 이제 내 컴퓨터가 아닌, 배포된 실제 API 서버 주소를 사용합니다.
+    const API_URL = "https://castingenergy-api.vercel.app/api/works";
 
     fetch(API_URL)
       .then((res) => {
@@ -31,10 +31,10 @@ export function ModelsGrid() {
           const formattedData = data.map((item: any) => ({
             id: item.id || Math.random(),
             title: item.title || "Casting Energy Work",
-            // 이미지 주소가 상대 경로일 경우 3002번 주소를 붙여줌
+            // 이미지 주소가 상대 경로일 경우 배포된 API 주소를 붙여줌
             image: (item.image || item.secure_url || item.url)?.startsWith('http') 
-                   ? (item.image || item.secure_url || item.url)
-                   : `http://localhost:3002${item.image || item.secure_url || item.url}`,
+                    ? (item.image || item.secure_url || item.url)
+                    : `https://castingenergy-api.vercel.app${item.image || item.secure_url || item.url}`,
             description: item.description || ""
           }));
           setWorks(formattedData);
