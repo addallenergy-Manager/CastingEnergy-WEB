@@ -43,7 +43,7 @@ export function FAQ() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-3xl md:text-4xl font-bold text-black uppercase text-center"
           >
-Q&A
+           Q&A
       </motion.h2>
       <motion.div 
         initial={{ width: 0 }}
