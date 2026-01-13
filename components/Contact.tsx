@@ -33,7 +33,7 @@ export function Contact() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 // 그라데이션 라인 높이와 색상 동일하게 적용
-                className="h-0.75 bg-linear-to-r from-red-600 to-orange-500 mt-3"
+                className="h-0.75 bg-linear-to-r from-brand-red to-brand-orange mt-4"
               />
             </div>
 
@@ -85,7 +85,7 @@ export function Contact() {
                 <Clock className="w-4 h-4" /> Operating Hours
               </div>
               <p className="text-gray-600">
-                평일 11:00 – 19:00 <span className="text-gray-400 mx-2">|</span> 
+                평일 10:00 – 19:00 <span className="text-gray-400 mx-2">|</span> 
                 <span>주말 및 공휴일 휴무</span>
               </p>
             </div>
