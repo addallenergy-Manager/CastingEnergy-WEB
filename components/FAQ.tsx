@@ -51,7 +51,7 @@ Q&A
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
         // 동일한 그라데이션 라인 적용
-        className="h-0.75 bg-linear-to-r from-red-600 to-orange-500 mt-4 mx-auto"
+        className="h-0.75 bg-linear-to-r from-brand-red to-brand-orange mt-4"
       />
       {/* 서브 텍스트 (선택사항: 원치 않으시면 삭제 가능) */}
       <p className="text-gray-500 font-light mt-6">자주 묻는 질문들을 확인해보세요</p>
