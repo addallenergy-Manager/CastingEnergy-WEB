@@ -114,9 +114,9 @@ export function Hero() {
 
           >
 
-            iconic Faces<br />
+            Just for<br />
 
-            for iconic Brands
+            Your Projects
 
           </motion.h1>
 
