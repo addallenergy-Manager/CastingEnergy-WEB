@@ -84,7 +84,7 @@ useEffect(() => {
             whileInView={{ width: "60px" }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="h-0.75 bg-linear-to-r from-brand-red to-brand-orange mt-3"
+            className="h-0.75 bg-linear-to-r from-brand-red to-brand-orange mt-4"
           />
         </div>
 
