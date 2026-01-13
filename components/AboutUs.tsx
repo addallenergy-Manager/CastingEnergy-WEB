@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { number: "21350", label: "Professional Models" },
-  { number: "1542", label: "Successful Campaigns" },
+  { number: "121350", label: "Professional Models" },
+  { number: "3542", label: "Successful Campaigns" },
   { number: "20", label: "Years of Experience" },
-  { number: "50", label: "Brand Partners" }
+  { number: "178", label: "Brand Partners" }
 ];
 
 export function AboutUs() {
@@ -30,7 +30,7 @@ export function AboutUs() {
             whileInView={{ width: "60px" }} // 선의 길이도 타이틀에 맞춰 줄였습니다.
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="h-0.75 bg-linear-to-r from-brand-red to-brand-orange mt-3"
+            className="h-0.75 bg-linear-to-r from-brand-red to-brand-orange mt-4"
           />
         </div>
 
