@@ -12,7 +12,7 @@ export function Hero() {
 
   const images = [
 
-    "https://res.cloudinary.com/dwlmsjaar/image/upload/v1767940259/%EB%91%90%EB%93%9C%EB%A6%BC%20%EA%B3%A0%ED%98%84%EC%A0%95.jpg",
+    "https://res.cloudinary.com/dwlmsjaar/image/upload/v1768897765/%EC%B2%9C%ED%95%98%EC%A0%9C%EC%9D%BC%EC%83%81%EA%B1%B0%EC%83%81.jpg",
 
     "https://res.cloudinary.com/dwlmsjaar/image/upload/v1767940939/%EC%9C%A0%EC%95%A4%EB%82%9C%EB%AF%BC%20%ED%83%80%EC%9D%B4%ED%8B%801.jpg",
 
