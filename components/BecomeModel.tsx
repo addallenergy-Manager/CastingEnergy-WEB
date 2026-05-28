@@ -187,7 +187,7 @@ export function BecomeModel() {
               <p className="font-bold text-zinc-700 underline mb-2">[개인정보 수집 및 이용 안내]</p>
               1. 수집항목: 이름, 생년, 키, 체중, 국적, 연락처 등<br />
               2. 이용목적: 모델 지원 심사 및 캐스팅 제안 연락<br />
-              3. 보유기간: 지원일로부터 3년 보관 후 파기
+              3. 지원서에 첨부된 자료 및 정보는 캐스팅에너지의 모델 캐스팅 및 홍보 목적으로 활용됩니다.
             </div>
             <label className="flex items-center gap-3 cursor-pointer">
               <input type="checkbox" checked={agree} onChange={() => setAgree(!agree)} className="w-5 h-5 accent-black" />
