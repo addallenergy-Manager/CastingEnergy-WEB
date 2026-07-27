@@ -14,15 +14,18 @@ import { Footer } from "../components/Footer";
 import { ScrollToTop } from "../components/ScrollToTop";
 
 export default function Page() {
+  // 💡 1. 기본 상태를 false로 유지합니다.
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   useEffect(() => {
-    const popupHideUntil = localStorage.getItem("popupHideUntil");
-    const now = new Date().getTime();
-
-    if (!popupHideUntil || now > parseInt(popupHideUntil)) {
-      setIsPopupOpen(false);
-    }
+    // 💡 팝업을 완전히 끌 때는 아래 로직이 실행되지 않도록 주석 처리합니다.
+    // (나중에 팝업을 다시 켜고 싶을 때 아래 주석(//)만 제거하시면 됩니다!)
+    //
+    // const popupHideUntil = localStorage.getItem("popupHideUntil");
+    // const now = new Date().getTime();
+    // if (!popupHideUntil || now > parseInt(popupHideUntil)) {
+    //   setIsPopupOpen(true);
+    // }
   }, []);
 
   const handleClose = () => {
