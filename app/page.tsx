@@ -17,12 +17,13 @@ export default function Page() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   useEffect(() => {
-    const popupHideUntil = localStorage.getItem("popupHideUntil");
-    const now = new Date().getTime();
+    // 💡 팝업 끄기: 아래 로직 전체를 주석 처리해서 실행되지 않게 막았습니다.
+    // const popupHideUntil = localStorage.getItem("popupHideUntil");
+    // const now = new Date().getTime();
 
-    if (!popupHideUntil || now > parseInt(popupHideUntil)) {
-      setIsPopupOpen(true);
-    }
+    // if (!popupHideUntil || now > parseInt(popupHideUntil)) {
+    //   setIsPopupOpen(true);
+    // }
   }, []);
 
   const handleClose = () => {
