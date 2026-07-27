@@ -14,13 +14,10 @@ import { Footer } from "../components/Footer";
 import { ScrollToTop } from "../components/ScrollToTop";
 
 export default function Page() {
-  // 💡 1. 기본 상태를 false로 유지합니다.
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   useEffect(() => {
-    // 💡 팝업을 완전히 끌 때는 아래 로직이 실행되지 않도록 주석 처리합니다.
-    // (나중에 팝업을 다시 켜고 싶을 때 아래 주석(//)만 제거하시면 됩니다!)
-    //
+    // 💡 팝업 비활성화 중
     // const popupHideUntil = localStorage.getItem("popupHideUntil");
     // const now = new Date().getTime();
     // if (!popupHideUntil || now > parseInt(popupHideUntil)) {
@@ -53,7 +50,8 @@ export default function Page() {
       <Footer />
       <ScrollToTop />
 
-      {/* 📢 공지 팝업창 (isPopupOpen이 false이므로 화면에 그려지지 않습니다) */}
+      {/* 📢 팝업 기능을 잠시 끌 때는 아래처럼 JSX 태그 자체를 주석 {/* ... */} 처리해야 100% 안전합니다. */}
+      {/* 
       <AnimatePresence>
         {isPopupOpen && (
           <motion.div
@@ -68,13 +66,11 @@ export default function Page() {
               exit={{ scale: 0.95, y: 20 }}
               className="bg-white text-black w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl flex flex-col border border-zinc-100"
             >
-              {/* 상단 타이틀 영역 */}
               <div className="py-7 bg-linear-to-r from-brand-red to-brand-orange text-white text-center">
                 <p className="text-xs tracking-widest uppercase font-semibold opacity-80">Notice</p>
                 <h2 className="text-xl font-bold mt-1">안내 말씀드립니다</h2>
               </div>
 
-              {/* 본문 영역 */}
               <div className="p-8 text-center bg-white">
                 <div className="text-zinc-700 text-[15px] leading-relaxed space-y-4 font-normal">
                   <p className="font-semibold text-zinc-900 text-base">
@@ -98,7 +94,6 @@ export default function Page() {
                 </div>
               </div>
 
-              {/* 하단 버튼 영역 */}
               <div className="border-t border-zinc-200 flex bg-zinc-50 text-sm select-none">
                 <button
                   onClick={handleHideForDay}
@@ -117,6 +112,7 @@ export default function Page() {
           </motion.div>
         )}
       </AnimatePresence>
+      */}
     </main>
   );
 }
