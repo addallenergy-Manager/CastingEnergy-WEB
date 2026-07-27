@@ -53,7 +53,7 @@ export default function Page() {
       <Footer />
       <ScrollToTop />
 
-      {/* 📢 요청하신 문구로 변경된 공지 팝업창 */}
+      {/* 📢 공지 팝업창 (isPopupOpen이 false이므로 화면에 그려지지 않습니다) */}
       <AnimatePresence>
         {isPopupOpen && (
           <motion.div
@@ -74,7 +74,7 @@ export default function Page() {
                 <h2 className="text-xl font-bold mt-1">안내 말씀드립니다</h2>
               </div>
 
-              {/* 본문 영역 (보내주신 문구 반영) */}
+              {/* 본문 영역 */}
               <div className="p-8 text-center bg-white">
                 <div className="text-zinc-700 text-[15px] leading-relaxed space-y-4 font-normal">
                   <p className="font-semibold text-zinc-900 text-base">
