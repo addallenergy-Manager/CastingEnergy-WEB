@@ -16,7 +16,7 @@ export function Hero() {
 
     "https://res.cloudinary.com/dwlmsjaar/image/upload/v1767940259/%EB%91%90%EB%93%9C%EB%A6%BC%20%EA%B3%A0%ED%98%84%EC%A0%95.jpg",
 
-    "https://res.cloudinary.com/dwlmsjaar/image/upload/v1770099392/%EB%8D%98%EC%A0%84%EB%9F%B0%EA%B9%80%EB%8F%99%ED%98%84.jpg"
+    "https://res.cloudinary.com/dwlmsjaar/image/upload/v1788939939/%EB%A9%94%EB%94%94%EC%BD%95%20%EC%9C%A0%EC%9D%B4.jpg"
 
   ];
 
