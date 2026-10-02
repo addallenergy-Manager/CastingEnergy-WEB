@@ -47,8 +47,8 @@ export function AboutUs() {
             <h3 className="text-5xl md:text-6xl leading-tight text-black">
               {/* 💡 font-bold를 전체에 적용하여 굵기를 통일했습니다 */}
               <div className="font-bold">
-                GET <span className="text-[#ef4444]">E</span>
-                <span className="text-[#f97316]">NERGY</span>,
+                GET <span className="text-[#e61e1e]">E</span>
+                <span className="text-[#fa961e]">NERGY</span>,
               </div>
               <div className="font-bold">
                 BE ICONIC.
