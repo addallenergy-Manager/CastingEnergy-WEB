@@ -39,12 +39,12 @@ export function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-100 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isMenuOpen ? "bg-white/95 backdrop-blur-md shadow-sm py-2" : "bg-transparent py-4"
       }`}
     >
       {/* 상단 헤더 바 */}
-      <div className="max-w-400 mx-auto px-4 md:px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between">
         
         {/* 로고 영역 */}
         <button
@@ -63,22 +63,30 @@ export function Header() {
           />
         </button>
 
-        {/* 데스크탑 메뉴 */}
+        {/* 데스크탑 메뉴 (마우스 올리면 오렌지-레드 그라데이션 밑줄) */}
         <nav className="hidden md:flex items-center gap-8 lg:gap-12">
           {navItems.map((item) => (
             <a 
               key={item.name}
               href={item.href} 
-              className={`text-[11px] lg:text-[12px] font-bold tracking-[0.2em] uppercase transition-all hover:opacity-50 ${
+              className={`group relative py-2 text-[11px] lg:text-[12px] font-bold tracking-[0.2em] uppercase transition-colors ${
                 isScrolled ? "text-black" : "text-white"
               }`}
             >
               {item.name}
+              
+              {/* ✨ 주황 -> 빨강 선명한 시그니처 그라데이션 밑줄 */}
+              <span 
+                style={{
+                  background: "linear-gradient(90deg, #f97316 0%, #f43f5e 50%, #ef4444 100%)"
+                }}
+                className="absolute bottom-0 left-0 w-full h-0.75 rounded-full transition-transform duration-300 ease-out origin-left scale-x-0 group-hover:scale-x-100"
+              />
             </a>
           ))}
         </nav>
 
-        {/* 모바일 메뉴 버튼 (삼선 / X 토글) */}
+        {/* 모바일 메뉴 버튼 */}
         <button 
           onClick={toggleMenu}
           aria-label="Toggle mobile menu"
