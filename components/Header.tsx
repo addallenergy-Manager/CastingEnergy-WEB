@@ -63,27 +63,22 @@ export function Header() {
           />
         </button>
 
-        {/* 데스크탑 메뉴 (마우스 호버 시 로고 그라데이션 바 애니메이션) */}
+        {/* 데스크탑 메뉴 */}
         <nav className="hidden md:flex items-center gap-8 lg:gap-12">
           {navItems.map((item) => (
             <a 
               key={item.name}
               href={item.href} 
-              className={`group relative py-1 text-[11px] lg:text-[12px] font-bold tracking-[0.2em] uppercase transition-colors ${
+              className={`text-[11px] lg:text-[12px] font-bold tracking-[0.2em] uppercase transition-all hover:opacity-50 ${
                 isScrolled ? "text-black" : "text-white"
               }`}
             >
               {item.name}
-              
-              {/* ✨ CASTING ENERGY 로고 포인트 그라데이션 바 */}
-              <span 
-                className="absolute bottom-0 left-0 w-full h-0.5 bg-linear-to-r from-orange-500 via-rose-500 to-purple-600 transition-transform duration-300 origin-left scale-x-0 group-hover:scale-x-100"
-              />
             </a>
           ))}
         </nav>
 
-        {/* 모바일 메뉴 버튼 */}
+        {/* 모바일 메뉴 버튼 (삼선 / X 토글) */}
         <button 
           onClick={toggleMenu}
           aria-label="Toggle mobile menu"
