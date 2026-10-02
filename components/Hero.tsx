@@ -37,7 +37,7 @@ export function Hero() {
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
         </AnimatePresence>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
       </div>
 
       {/* Content: 좌하단 정렬 및 텍스트 최적화 */}
