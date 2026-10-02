@@ -47,8 +47,8 @@ export function AboutUs() {
             <h3 className="text-5xl md:text-6xl leading-tight text-black">
               {/* 💡 font-bold를 전체에 적용하여 굵기를 통일했습니다 */}
               <div className="font-bold">
-                GET <span className="text-brand-red">E</span>
-                <span className="text-brand-orange">NERGY</span>,
+                GET <span className="text-[#ef4444]">E</span>
+                <span className="text-[#f97316]">NERGY</span>,
               </div>
               <div className="font-bold">
                 BE ICONIC.
@@ -77,33 +77,33 @@ export function AboutUs() {
         </div>
 
         {/* 하단 통계 섹션 - 중앙 정렬 및 굵기 최적화 */}
-<div className="grid grid-cols-2 md:grid-cols-4 gap-12 pt-16 border-t border-gray-100">
-  {stats.map((stat, index) => (
-    <motion.div 
-      key={index} 
-      // 💡 items-center를 추가하여 중앙 정렬했습니다.
-      className="flex flex-col items-center text-center" 
-      initial={{ opacity: 0, y: 15 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-    >
-      {/* 💡 font-black(가장 두꺼움)에서 font-bold(표준 굵음)로 줄였습니다. */}
-      <span className="text-3xl md:text-4xl font-bold tracking-tighter text-black mb-2">
-        {stat.number}
-        <span className="text-lg font-light text-brand-orange ml-1">+</span>
-      </span>
-      
-      <div className="flex items-center gap-2 justify-center">
-        <div className="w-4 h-px bg-gray-300"></div>
-        <p className="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-medium">
-          {stat.label}
-        </p>
-        <div className="w-4 h-px bg-gray-300"></div>
-      </div>
-    </motion.div>
-  ))}
-</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 pt-16 border-t border-gray-100">
+          {stats.map((stat, index) => (
+            <motion.div 
+              key={index} 
+              // 💡 items-center를 추가하여 중앙 정렬했습니다.
+              className="flex flex-col items-center text-center" 
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              {/* 💡 font-black(가장 두꺼움)에서 font-bold(표준 굵음)로 줄였습니다. */}
+              <span className="text-3xl md:text-4xl font-bold tracking-tighter text-black mb-2">
+                {stat.number}
+                <span className="text-lg font-light text-[#f97316] ml-1">+</span>
+              </span>
+              
+              <div className="flex items-center gap-2 justify-center">
+                <div className="w-4 h-px bg-gray-300"></div>
+                <p className="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-medium">
+                  {stat.label}
+                </p>
+                <div className="w-4 h-px bg-gray-300"></div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
       </div>
     </section>
