@@ -78,7 +78,7 @@ export function Header() {
               {/* ✨ 주황 -> 빨강 그라데이션 밑줄 바 */}
               <span 
                 style={{
-                  background: "linear-gradient(90deg, #f97316 0%, #f43f5e 50%, #ef4444 100%)"
+                  background: "linear-gradient(90deg, #E61E1E 0%, #FA961E 100%)"
                 }}
                 className="absolute bottom-0 left-0 w-full h-0.5 transition-transform duration-300 ease-out origin-left scale-x-0 group-hover:scale-x-100"
               />
