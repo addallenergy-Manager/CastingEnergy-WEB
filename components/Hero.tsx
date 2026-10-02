@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import confetti from "canvas-confetti";
 
 // 1. 이미지를 컴포넌트 외부에 선언하여 불필요한 재렌더링 방지
 const IMAGES = [
@@ -12,6 +13,7 @@ const IMAGES = [
 
 export function Hero() {
   const [index, setIndex] = useState(0);
+  const [clickCount, setClickCount] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -20,11 +22,31 @@ export function Hero() {
     return () => clearInterval(timer);
   }, []);
 
+  // 🎉 5번 연속 클릭 시 컨페티(폭죽) 실행 함수
+  const handleEasterEggClick = () => {
+    const nextCount = clickCount + 1;
+    setClickCount(nextCount);
+
+    if (nextCount === 5) {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
+      setTimeout(() => {
+        confetti({ particleCount: 50, angle: 60, spread: 55, origin: { x: 0 } });
+        confetti({ particleCount: 50, angle: 120, spread: 55, origin: { x: 1 } });
+      }, 200);
+
+      setClickCount(0);
+    }
+  };
+
   return (
     <section className="relative w-full h-[80vh] md:h-screen overflow-hidden bg-black">
       {/* Background Image with Animation */}
       <div className="absolute inset-0 z-0">
-        {/* 2. mode="wait"를 제거하여 두 이미지가 자연스럽게 겹치며 전환(Cross-fade)되도록 변경 */}
         <AnimatePresence initial={false}>
           <motion.img
             key={IMAGES[index]}
@@ -47,7 +69,8 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-white tracking-[0.4em] text-xs md:text-sm font-light uppercase mb-6"
+            onClick={handleEasterEggClick}
+            className="text-white tracking-[0.4em] text-xs md:text-sm font-light uppercase mb-6 cursor-pointer select-none"
           >
             CastingEnergy
           </motion.p>
