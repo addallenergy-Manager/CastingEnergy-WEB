@@ -39,14 +39,14 @@ export function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-100 transition-all duration-300 ${
         isScrolled || isMenuOpen ? "bg-white/95 backdrop-blur-md shadow-sm py-2" : "bg-transparent py-4"
       }`}
     >
-      {/* 상단 헤더 바 */}
-      <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between">
+      {/* 상단 헤더 바 (원래의 max-w-400 컨테이너 복원) */}
+      <div className="max-w-400 mx-auto px-4 md:px-6 flex items-center justify-between">
         
-        {/* 로고 영역 */}
+        {/* 로고 영역 (원래의 음수 마진 -ml-1 md:-ml-2 위치 복원) */}
         <button
           onClick={scrollToTop}
           className="flex items-center cursor-pointer transition-transform hover:scale-105 -ml-1 md:-ml-2"
@@ -63,24 +63,24 @@ export function Header() {
           />
         </button>
 
-        {/* 데스크탑 메뉴 (마우스 올리면 오렌지-레드 그라데이션 밑줄) */}
+        {/* 데스크탑 메뉴 (오렌지-레드 시그니처 그라데이션 밑줄) */}
         <nav className="hidden md:flex items-center gap-8 lg:gap-12">
           {navItems.map((item) => (
             <a 
               key={item.name}
               href={item.href} 
-              className={`group relative py-2 text-[11px] lg:text-[12px] font-bold tracking-[0.2em] uppercase transition-colors ${
+              className={`group relative py-1 text-[11px] lg:text-[12px] font-bold tracking-[0.2em] uppercase transition-colors ${
                 isScrolled ? "text-black" : "text-white"
               }`}
             >
               {item.name}
               
-              {/* ✨ 주황 -> 빨강 선명한 시그니처 그라데이션 밑줄 */}
+              {/* ✨ 주황 -> 빨강 그라데이션 밑줄 바 */}
               <span 
                 style={{
                   background: "linear-gradient(90deg, #f97316 0%, #f43f5e 50%, #ef4444 100%)"
                 }}
-                className="absolute bottom-0 left-0 w-full h-0.75 rounded-full transition-transform duration-300 ease-out origin-left scale-x-0 group-hover:scale-x-100"
+                className="absolute bottom-0 left-0 w-full h-0.5 transition-transform duration-300 ease-out origin-left scale-x-0 group-hover:scale-x-100"
               />
             </a>
           ))}
